@@ -32,16 +32,13 @@ pool: Default
 resources:
   repositories:
   # Azure DevOps repository
-  - repository: kasvatus-koulutus-pipelines
+  - repository: drupal-performance-testing-pipelines
     type: git
     # Azure DevOps project/repository
-    name: kasvatus-koulutus/kasvatus-koulutus-pipelines
+    name: drupal-performance-testing/drupal-performance-testing-pipelines
 
 extends:
   # Filename in Azure DevOps Repository (note possible -ui or -api)
   # Django example: azure-pipelines-kasvatus-koulutus-api-master.yml
   # Drupal example: azure-pipelines-drupal-master.yml
-  template: azure-pipelines-kasvatus-koulutus-devtest.yml@kasvatus-koulutus-pipelines
-  # Image tag name for Fuse projects
-  #parameters:
-    #imagetag: ${{ parameters.imagetag }}
+  template: azure-pipelines-drupal-performance-testing-devtest.yml@drupal-performance-testing-pipelines
