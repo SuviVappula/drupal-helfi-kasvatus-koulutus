@@ -32,13 +32,13 @@ pool: Default
 resources:
   repositories:
   # Azure DevOps repository
-  - repository: drupal-performance-testing-pipelines
+  - repository: unittest1-pipelines
     type: git
     # Azure DevOps project/repository
-    name: drupal-performance-testing/drupal-performance-testing-pipelines
+    name: unittest1/unittest1-pipelines
 
 extends:
   # Filename in Azure DevOps Repository (note possible -ui or -api)
   # Django example: azure-pipelines-kasvatus-koulutus-api-master.yml
   # Drupal example: azure-pipelines-drupal-master.yml
-  template: azure-pipelines-drupal-performance-testing-devtest.yml@drupal-performance-testing-pipelines
+  template: azure-pipelines-drupal-service-test2-devtest.yml@unittest1-pipelines
